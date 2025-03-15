@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python3 MaskingRAG/RAG.py --dataset_check google --check_mask_item all --mask_check True --model_type Phi --model_size 8 --masking_rate 0.1

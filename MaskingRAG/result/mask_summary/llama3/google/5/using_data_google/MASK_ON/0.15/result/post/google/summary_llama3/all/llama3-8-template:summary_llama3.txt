@@ -1,0 +1,10 @@
+ [SEP] assistant  Five people have been taken to hospital after a crash on the A17.
+ [SEP] assistant  Several school districts are holding classes to make up for days missed because of the snow.
+ [SEP] assistant  Luis Suarez was spotted in London.
+ [SEP] assistant  A woman was injured by a falling tree.
+ [SEP] assistant  Birmingham poet Benjamin Zephaniah is leading an interactive poetry day.
+ [SEP] assistant  Vodafone is seeking regulatory approval to take full control of its Indian unit.
+ [SEP] assistant  Markets continued to remain under pressure on Thursday morning.
+ [SEP] assistant  Rick Riordan has revealed the cover for his latest crossover short story.
+ [SEP] assistant  Ukraine accused Russia of sending thousands of troops into Crimea.
+ [SEP] assistant  A man was cleared of killing his father.

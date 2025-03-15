@@ -1,0 +1,90 @@
+0.1
+MASK_ON
+MaskingRAG/result/mask_summary/llama3/google/5/using_data_google/MASK_ON/0.1/result/post/google/summary_llama3/all/llama3-8-template:summary_llama3_V3.txt
+
+    Avg R-1 scores: 84.28
+    Avg R-2 scores: 75.60
+    Avg R-L scores: 82.37
+    Avg F-1 scores: 0.85
+    Avg tgt-cr ratio: 51.12
+    Avg hyp-cr ratio: 48.98
+    Avg number of para words: 0.3000
+    ----------------------------------------------------------------------------------------------------
+
+0.15
+MASK_ON
+MaskingRAG/result/mask_summary/llama3/google/5/using_data_google/MASK_ON/0.15/result/post/google/summary_llama3/all/llama3-8-template:summary_llama3_V3.txt
+
+    Avg R-1 scores: 82.89
+    Avg R-2 scores: 73.96
+    Avg R-L scores: 80.98
+    Avg F-1 scores: 0.84
+    Avg tgt-cr ratio: 51.12
+    Avg hyp-cr ratio: 46.75
+    Avg number of para words: 0.3000
+    ----------------------------------------------------------------------------------------------------
+
+0.3
+MASK_ON
+MaskingRAG/result/mask_summary/llama3/google/5/using_data_google/MASK_ON/0.3/result/post/google/summary_llama3/all/llama3-8-template:summary_llama3_V3.txt
+
+    Avg R-1 scores: 76.87
+    Avg R-2 scores: 66.54
+    Avg R-L scores: 74.97
+    Avg F-1 scores: 0.79
+    Avg tgt-cr ratio: 51.12
+    Avg hyp-cr ratio: 47.93
+    Avg number of para words: 0.5000
+    ----------------------------------------------------------------------------------------------------
+
+0.5
+MASK_ON
+MaskingRAG/result/mask_summary/llama3/google/5/using_data_google/MASK_ON/0.5/result/post/google/summary_llama3/all/llama3-8-template:summary_llama3_V3.txt
+
+    Avg R-1 scores: 77.84
+    Avg R-2 scores: 66.88
+    Avg R-L scores: 75.93
+    Avg F-1 scores: 0.79
+    Avg tgt-cr ratio: 51.12
+    Avg hyp-cr ratio: 49.87
+    Avg number of para words: 0.5000
+    ----------------------------------------------------------------------------------------------------
+
+0.7
+MASK_ON
+MaskingRAG/result/mask_summary/llama3/google/5/using_data_google/MASK_ON/0.7/result/post/google/summary_llama3/all/llama3-8-template:summary_llama3_V3.txt
+
+    Avg R-1 scores: 73.98
+    Avg R-2 scores: 62.52
+    Avg R-L scores: 72.08
+    Avg F-1 scores: 0.76
+    Avg tgt-cr ratio: 51.12
+    Avg hyp-cr ratio: 45.87
+    Avg number of para words: 0.6000
+    ----------------------------------------------------------------------------------------------------
+
+1
+MASK_ON
+MaskingRAG/result/mask_summary/llama3/google/5/using_data_google/MASK_ON/1/result/post/google/summary_llama3/all/llama3-8-template:summary_llama3_V3.txt
+
+    Avg R-1 scores: 76.04
+    Avg R-2 scores: 65.55
+    Avg R-L scores: 74.13
+    Avg F-1 scores: 0.77
+    Avg tgt-cr ratio: 51.12
+    Avg hyp-cr ratio: 48.04
+    Avg number of para words: 0.6000
+    ----------------------------------------------------------------------------------------------------
+
+None
+MASK_OFF
+MaskingRAG/result/mask_summary/llama3/google/5/using_data_google/MASK_OFF/result/post/google/summary_llama3/llama3-8-template:summary_llama3_V3.txt
+
+    Avg R-1 scores: 77.71
+    Avg R-2 scores: 66.49
+    Avg R-L scores: 75.80
+    Avg F-1 scores: 0.79
+    Avg tgt-cr ratio: 51.12
+    Avg hyp-cr ratio: 49.12
+    Avg number of para words: 0.5000
+    ----------------------------------------------------------------------------------------------------
