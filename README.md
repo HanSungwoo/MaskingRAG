@@ -7,7 +7,7 @@ First, we perform NER tagging on the training data of each task’s dataset usin
 
 Next, we map the matched NER tags to the tokens they correspond to.
 
-Third, each mapped token is replaced with a special token that represents its corresponding label, inserted according to a specified ratio. For example, if the rate is set to 1 and the sample sentence is "I am Kim Yun-gyeong", it will be transformed into "I am <PER>."
+Third, each mapped token is replaced with a special token that represents its corresponding label, inserted according to a specified ratio. For example, if the rate is set to 1 and the sample sentence is "I am Kim Yun-gyeong", it will be transformed into "I am \<PER\>."
 
 Finally, to generate the vector for the special token, we calculate the vectors for all the mapped tokens in the entire training dataset, take their average, and designate the result as the special token’s vector.
 
@@ -29,7 +29,7 @@ Finally, to generate the vector for the special token, we calculate the vectors 
 - Data Preparation for RAG Retrieval
 
     - The dataset is constructed to match the specified masking ratio. (0.1, 0.15, 0.3, 0.5, 0.7, 1)
-    - For retrieval, the dataset includes special tokens (e.g., <PER>, <LOC>, <ORG>, <MISC>) that are inserted according to the masking ratio.
+    - For retrieval, the dataset includes special tokens (e.g. \<PER\>, \<LOC\>, \<ORG\>, \<MISC\>) that are inserted according to the masking ratio.
     - During similarity computation, the index of the closest matching data point is returned.
 - Few-Shot Setup
 
@@ -78,7 +78,7 @@ Finally, to generate the vector for the special token, we calculate the vectors 
 
         bash make_mask_dataset.sh
 
-Additionally, in check_mask_item, using all means that <PER>, <ORG>, <LOC>, and <MISC> are used, while changing it to per_loc_org uses only <PER>, <ORG>, and <LOC>.
+Additionally, in check_mask_item, using all means that \<PER\>, \<ORG\>, \<LOC\>, and \<MISC\> are used, while changing it to per_loc_org uses only <PER>, <ORG>, and <LOC>.
 
 ## Eval step
 - Inference Completion
