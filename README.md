@@ -106,3 +106,163 @@ Additionally, in check_mask_item, using all means that <PER>, <ORG>, <LOC>, and 
                      --check_maks_tag all /
                      --data_name google /
                      --example_num 5 
+
+
+# 📂 MaskingRag Dataset Structure
+        MaskingRAG/
+        ├── remove_output_and_eval_summary.py
+        ├── result_add_bio_tag.py
+        ├── google_train_data_porcees.py
+        ├── result/
+        │   ├── mask_summary/
+        │   │   └── llama3/
+        │   │       └── google/
+        │   │           └── 5/
+        │   │               └── using_data_google/
+        │   │                   ├── result/
+        │   │                   │   └── all/
+        │   │                   │       └── eval_result.txt
+        │   │                   ├── MASK_ON/
+        │   │                   │   ├── 0.3/
+        │   │                   │   │   ├── result/
+        │   │                   │   │   │   └── post/
+        │   │                   │   │   │       └── google/
+        │   │                   │   │   │           └── summary_llama3/
+        │   │                   │   │   │               └── all/
+        │   │                   │   │   │                   ├── llama3-8-template:summary_llama3_V3.txt
+        │   │                   │   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   │   └── output/
+        │   │                   │   │       └── google/
+        │   │                   │   │           └── summary_llama3/
+        │   │                   │   │               └── all/
+        │   │                   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   ├── 0.15/
+        │   │                   │   │   ├── result/
+        │   │                   │   │   │   └── post/
+        │   │                   │   │   │       └── google/
+        │   │                   │   │   │           └── summary_llama3/
+        │   │                   │   │   │               └── all/
+        │   │                   │   │   │                   ├── llama3-8-template:summary_llama3_V3.txt
+        │   │                   │   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   │   └── output/
+        │   │                   │   │       └── google/
+        │   │                   │   │           └── summary_llama3/
+        │   │                   │   │               └── all/
+        │   │                   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   ├── 1/
+        │   │                   │   │   ├── result/
+        │   │                   │   │   │   └── post/
+        │   │                   │   │   │       └── google/
+        │   │                   │   │   │           └── summary_llama3/
+        │   │                   │   │   │               └── all/
+        │   │                   │   │   │                   ├── llama3-8-template:summary_llama3_V3.txt
+        │   │                   │   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   │   └── output/
+        │   │                   │   │       └── google/
+        │   │                   │   │           └── summary_llama3/
+        │   │                   │   │               └── all/
+        │   │                   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   ├── 0.5/
+        │   │                   │   │   ├── result/
+        │   │                   │   │   │   └── post/
+        │   │                   │   │   │       └── google/
+        │   │                   │   │   │           └── summary_llama3/
+        │   │                   │   │   │               └── all/
+        │   │                   │   │   │                   ├── llama3-8-template:summary_llama3_V3.txt
+        │   │                   │   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   │   └── output/
+        │   │                   │   │       └── google/
+        │   │                   │   │           └── summary_llama3/
+        │   │                   │   │               └── all/
+        │   │                   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   ├── 0.7/
+        │   │                   │   │   ├── result/
+        │   │                   │   │   │   └── post/
+        │   │                   │   │   │       └── google/
+        │   │                   │   │   │           └── summary_llama3/
+        │   │                   │   │   │               └── all/
+        │   │                   │   │   │                   ├── llama3-8-template:summary_llama3_V3.txt
+        │   │                   │   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   │   └── output/
+        │   │                   │   │       └── google/
+        │   │                   │   │           └── summary_llama3/
+        │   │                   │   │               └── all/
+        │   │                   │   │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │   └── 0.1/
+        │   │                   │       ├── result/
+        │   │                   │       │   └── post/
+        │   │                   │       │       └── google/
+        │   │                   │       │           └── summary_llama3/
+        │   │                   │       │               └── all/
+        │   │                   │       │                   ├── llama3-8-template:summary_llama3_V3.txt
+        │   │                   │       │                   └── llama3-8-template:summary_llama3.txt
+        │   │                   │       └── output/
+        │   │                   │           └── google/
+        │   │                   │               └── summary_llama3/
+        │   │                   │                   └── all/
+        │   │                   │                       └── llama3-8-template:summary_llama3.txt
+        │   │                   └── MASK_OFF/
+        │   │                       ├── result/
+        │   │                       │   └── post/
+        │   │                       │       └── google/
+        │   │                       │           └── summary_llama3/
+        │   │                       │               ├── llama3-8-template:summary_llama3_V3.txt
+        │   │                       │               └── llama3-8-template:summary_llama3.txt
+        │   │                       └── output/
+        │   │                           └── google/
+        │   │                               └── summary_llama3/
+        │   │                                   └── llama3-8-template:summary_llama3.txt
+        ├── taged_reslut/
+        │   └── google/
+        │       ├── google_train_tag_result.jsonl
+        │       ├── 0.3/
+        │       │   ├── all/
+        │       │   │   └── google_tag_result_with_mask_0.3.jsonl
+        │       │   └── per_loc_org/
+        │       │       └── google_tag_result_with_mask_0.3.jsonl
+        │       ├── 0.15/
+        │       │   ├── all/
+        │       │   │   └── google_tag_result_with_mask_0.15.jsonl
+        │       │   └── per_loc_org/
+        │       │       └── google_tag_result_with_mask_0.15.jsonl
+        │       ├── 1/
+        │       │   ├── all/
+        │       │   │   └── google_tag_result_with_mask_1.jsonl
+        │       │   └── per_loc_org/
+        │       │       └── google_tag_result_with_mask_1.jsonl
+        │       ├── 0.5/
+        │       │   ├── all/
+        │       │   │   └── google_tag_result_with_mask_0.5.jsonl
+        │       │   └── per_loc_org/
+        │       │       └── google_tag_result_with_mask_0.5.jsonl
+        │       ├── remove_idx.jsonl
+        │       ├── google_train.txt
+        │       ├── 0.7/
+        │       │   ├── all/
+        │       │   │   └── google_tag_result_with_mask_0.7.jsonl
+        │       │   └── per_loc_org/
+        │       │       └── google_tag_result_with_mask_0.7.jsonl
+        │       ├── google_tag_vector.jsonl
+        │       └── 0.1/
+        │           ├── all/
+        │           │   └── google_tag_result_with_mask_0.1.jsonl
+        │           └── per_loc_org/
+        │               └── google_tag_result_with_mask_0.1.jsonl
+        ├── dataset_making_with_make_for_summary.py
+        ├── dataset/
+        │   └── google/
+        │       ├── transform.py
+        │       ├── google_test.jsonl
+        │       └── google_train.jsonl
+        ├── bert_base_ner_tagging_model.py
+        ├── utilsRAG/
+        │   ├── functions.py
+        │   └── __init__.py
+        │       
+        ├── utilsRAG/
+        │   └── template.py
+        ├── RAG.py
+        ├── evaluate_utils/
+        │   ├── evaluate_functions_for_summary.py
+        │   └── __init__.py
+        └── save_vector_each_dataset_original.py
