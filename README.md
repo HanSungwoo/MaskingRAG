@@ -1,7 +1,8 @@
 # MaskingRAG
 
 Example for google summarization dataset.
-
+## Installation
+        pip install -r requirements.txt
 ## RAG Dataset making
 First, we perform NER tagging on the training data of each task’s dataset using an NER extraction model.
 
