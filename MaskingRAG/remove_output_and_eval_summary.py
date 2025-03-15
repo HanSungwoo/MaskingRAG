@@ -9,7 +9,6 @@ import nltk
 
 def main(
         mode_name = "llama3", #Phi
-        mask_check = True,
         data_field = "summary",
         data_name = "google", #google
         example_num = 5,
