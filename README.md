@@ -54,6 +54,7 @@ Finally, to generate the vector for the special token, we calculate the vectors 
 
         bash make_mask_dataset.sh
 
+Additionally, in check_mask_item, using all means that <PER>, <ORG>, <LOC>, and <MISC> are used, while changing it to per_loc_org uses only <PER>, <ORG>, and <LOC>.
 
 ## Eval step
 - Inference Completion
@@ -62,8 +63,14 @@ Finally, to generate the vector for the special token, we calculate the vectors 
 - Result Saving
     - Once all evaluation results are generated, they are saved under the following directory:
 
-        MaskingRAG/result/mask_summary/llama3/{data_name}/{num_examples}/using_data_{data_name}/result/
+                MaskingRAG/result/mask_summary/llama3/{data_name}/{num_examples}/using_data_{data_name}/result/
 
     - This structure ensures that all experiment results are organized and easily accessible for further analysis.
  
-  
+  - python3 run code
+            python3 MaskingRAG/remove_output_and_eval_summary.py /
+     --mode_name llama3 /
+     --check_maks_tag all /
+     --data_name google /
+     --example_num 5 /
+     --
