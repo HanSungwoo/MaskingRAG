@@ -2,7 +2,6 @@ import json
 from typing import Tuple,List
 from tqdm import tqdm
 import torch
-import openai
 import yaml,fire,json,time
 
 def get_dataset(data:str='google') -> Tuple[List,List]:

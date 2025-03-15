@@ -2,7 +2,7 @@ import json
 import os
 import fire
 from tqdm import tqdm
-from transformers import AutoTokenizer, AutoModelForTokenClassification, BertForTokenClassification
+from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers import pipeline
 
 
