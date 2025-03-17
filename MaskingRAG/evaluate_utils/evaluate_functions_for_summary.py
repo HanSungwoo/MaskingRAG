@@ -8,7 +8,6 @@ from typing import List,Tuple,Dict
 def post_processing(outputs):
     return [extract_summary(output) for output in outputs]
 
-
 def extract_summary(sentence:str):
     sentence = sentence.strip().split("[[SEP]]")
     while len(sentence) > 0:
@@ -18,7 +17,6 @@ def extract_summary(sentence:str):
         if s not in ["","Sentence:"]:
             break
     return summary
-
 
 def sentences_post_processing(hyps,srcs,tgts):
     pp_hyps,pp_srcs,pp_tgts = [],[],[]
@@ -58,8 +56,6 @@ def sentences_post_processing(hyps,srcs,tgts):
     
     return pp_hyps,pp_srcs,pp_tgts
 
-
-
 def compute_token_f1(tgt_tokens, pred_tokens, use_counts=True):
     if not use_counts:
         tgt_tokens = set(tgt_tokens)
@@ -73,8 +69,6 @@ def compute_token_f1(tgt_tokens, pred_tokens, use_counts=True):
     r = overlap / len(tgt_tokens) if overlap > 0 else 0.
     f1 = (2 * p * r) / (p + r) if min(p, r) > 0 else 0.
     return f1
-
-
 
 def src_tgt_preprocess(text):
     text_tok = word_tokenize(text)
@@ -92,7 +86,6 @@ def hyp_preprocess(text):
     # text = text.replace(" ’ s "," 's ")
     text = text.lower()
     return text_tok
-
 
 def get_rouge(tgt, hyp):
     scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
@@ -122,9 +115,6 @@ def get_paraphrased_number(src, hyp):
             number += 1
     return number
 
-
-
-
 def evaluate(tgts:List[str],srcs:List[str],hyps:List[str]):
     """
     tgts = detokenized_summaries
@@ -133,7 +123,6 @@ def evaluate(tgts:List[str],srcs:List[str],hyps:List[str]):
     """
 
     hyps,srcs,tgts = sentences_post_processing(hyps,srcs,tgts)
-
 
     f1s=0
     r1s, r2s, rls = 0, 0, 0
@@ -157,7 +146,6 @@ def evaluate(tgts:List[str],srcs:List[str],hyps:List[str]):
         recalls_1 += recall_1
         recalls_2 += recall_2
         recalls_l += recall_l
-
 
         tgt_cr, hyp_cr = get_cr(tgt_tok, hyp_tok, src_tok)
         tgt_crs += tgt_cr

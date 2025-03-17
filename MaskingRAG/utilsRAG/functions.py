@@ -48,7 +48,6 @@ def get_dataset_ner_for_eval(data: str = 'conll03', template:str = "null") -> Li
             else:
                 token.append(line['tokens'])
                 ner_list.append(line['ner_tags'])
-        # print(token)
     return token, ner_list
 
 
@@ -80,3 +79,4 @@ def post_processing(data_field:str, outputs:List[str], prompts:List[str], templa
             prompt = prompt.replace("\n"," [SEP] ")
             post_processed_outputs.append(output.replace(prompt,""))
     return post_processed_outputs
+
