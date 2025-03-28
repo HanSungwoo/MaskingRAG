@@ -463,8 +463,8 @@ def inference(
     print(prompt_set[1])
     print("-"*80)
     for idx, tokens in enumerate(datas_token_only):
-        rag_few_shot_prompt, System_input = create_few_shot_prompt_set(mask_check, data_field, tokens, vector_store, model_for_sentence, template_type, num_examples=num_examples, model_type=model_type, dataset_check = dataset_check)
-        prompt = System_input
+        rag_few_shot_prompt, system_input = create_few_shot_prompt_set(mask_check, data_field, tokens, vector_store, model_for_sentence, template_type, num_examples=num_examples, model_type=model_type, dataset_check = dataset_check)
+        prompt = system_input
         # print(prompt)
         for rag_shot_prompt in rag_few_shot_prompt: 
             prompt += str(rag_shot_prompt)
