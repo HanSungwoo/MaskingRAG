@@ -128,7 +128,7 @@ def create_few_shot_prompt_set(
     distances, indices = find_most_similar(vector_store, query_vector, k=num_examples)
     # print(indices)
     examples = []
-    template, System = get_ner_template(template_type)
+    template, system = get_ner_template(template_type)
     for idx in indices:
         example = vector_store.docstore[idx]
         answer_finall = ''
@@ -144,7 +144,7 @@ def create_few_shot_prompt_set(
             answer_finall = template.format(input_text=text_list) + str(answer[0]) + " <|end|>\n"
         examples.append(answer_finall)
 
-    return examples, System
+    return examples, system
 
 def get_input_test_for_prompt(
     data_field: str, 
